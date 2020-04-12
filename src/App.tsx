@@ -140,6 +140,8 @@ function App() {
         setPanelHeight(sectionHeight);
         setCurrentData(obj.confirmed);
         setSpin(false);
+        const chart_width = window.innerWidth >= criticalPoint ? 640 : Math.min(window.innerWidth * 0.9, 640);
+        setChartWidth(chart_width);
       });
   }, []);
   useEffect(() => {
@@ -172,17 +174,7 @@ function App() {
     }
 
   }, [type, state.death, state.recovered, state.active, state.confirmed, countries]);
-  // useEffect(() => {
-  //   if (type === "death") {
-  //     setListData(calcColumnData(state.death));
-  //   } else if (type === "recovered") {
-  //     setListData(calcColumnData(state.recovered));
-  //   } else if (type === "active") {
-  //     setListData(calcColumnData(state.active));
-  //   } else {
-  //     setListData(calcColumnData(state.confirmed));
-  //   }
-  // }, [type]);
+
   /** Helper Function */
   /**
    * countriesUpdate
