@@ -1,6 +1,7 @@
 # fm-covid19-react
 
 Line chart of Covid19 confirmed/death/recovered cases.
+React version of fm-covid19: <https://github.com/osamunoda/fm-covid19>
 
 ## Data source
 
